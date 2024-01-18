@@ -25,13 +25,13 @@ import {
 } from "react-scroll-motion";
 import EventsPage from "../events";
 
-import instaLogo from "../../public/instagram.png"
+import instaLogo from "../../public/instagram.png";
 
 ("/Images/maxresdefault.jpg");
 const LandingPage = () => {
   return (
     <div id="main" className="outermost-div">
-      <section >
+      <section>
         <TitleComponent />
       </section>
       <section id="contact">
@@ -42,13 +42,15 @@ const LandingPage = () => {
           >
             Contact Us
           </div>
-          <div style={{display: "grid", gridTemplateColumns: "1fr 1fr"}}>
-            <div style={{
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+            <div
+              style={{
                 backgroundImage: "url(/vmlogo.png) ",
                 backgroundSize: "contain",
                 backgroundRepeat: "no-repeat",
                 // filter: "invert(100%)",
-              }} />
+              }}
+            />
             <div
               style={{
                 display: "flex",
@@ -65,7 +67,7 @@ const LandingPage = () => {
                 className="landing-card"
                 style={{ background: "none", color: "black" }}
               >
-                <div style={{color:"red"}} className="card-title">
+                <div style={{ color: "red" }} className="card-title">
                   <b> ELAS BPHC</b>
                 </div>
                 <div className="card-time" style={{ color: "red" }}>
@@ -79,10 +81,16 @@ const LandingPage = () => {
                 </div>
                 <div className="logoGroup">
                   <a href="https://www.instagram.com/vm.bphc?igsh=c2Y3eTM0dWtxZW9p">
-                    <div className="instaLogo" style={{ backgroundImage: "url(/instagram.png)" }} />
+                    <div
+                      className="instaLogo"
+                      style={{ backgroundImage: "url(/instagram.png)" }}
+                    />
                   </a>
                   <a href="https://www.facebook.com/verbamaximus?mibextid=ZbWKwL">
-                    <div className="instaLogo" style={{ backgroundImage: "url(/facebook.png)" }} />
+                    <div
+                      className="instaLogo"
+                      style={{ backgroundImage: "url(/facebook.png)" }}
+                    />
                   </a>
                 </div>
                 {/* <div className='card-desc'>
@@ -146,12 +154,15 @@ const TitleComponent = () => {
               justifyContent: "center",
             }}
           >
-            <br/><br/><br/><br/>
+            <br />
+            <br />
+            <br />
+            <br />
             <div
               className="theme-title"
               style={{ fontSize: !isMobile ? "7.4vw" : "7vh" }}
             >
-              Dante's Inferno
+              Dante&apos;s Inferno
             </div>
             <div
               className="theme-description"
