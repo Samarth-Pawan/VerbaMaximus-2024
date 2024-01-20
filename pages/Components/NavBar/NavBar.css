@@ -1,79 +1,79 @@
-:root{
-    --color1: rgb(133,5,3);
-    --color2: rgb(71,4,5,255);
-    --color2Blur: rgba(71,4,5,0.4);
+:root {
+  --color1: rgb(133, 5, 3);
+  --color2: rgb(71, 4, 5, 255);
+  --color2Blur: rgba(71, 4, 5, 0.4);
 }
 
-.navbar{
-    width: 100vw;
-    height: 15vh;
-    background-color: black;
-    position: fixed;
-    top:0;
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 100px;
-    box-shadow: 0px 0px 20px var(--color2Blur);
-    z-index: 100;
+.navbar {
+  width: 100vw;
+  height: 15vh;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 100px;
+  box-shadow: 0px 0px 20px var(--color2Blur);
+  z-index: 100;
 }
 
-.logo{
-    height: 100px;
-    position: relative;
-    left: 2vw;
+.logo {
+  height: 100px;
+  position: relative;
+  left: 2vw;
 }
 
-.headers{
-    display: flex;
-    flex-wrap: wrap;
-    /* width: 40vw; */
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+.headers {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 40vw; */
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.element{
-    color: red;
-    font-size: 1.8vw;
+.element {
+  color: red;
+  font-size: 1.8vw;
 }
 
-.register{
-    margin-left: 1vw;
-    padding: 15px 10px;
-    display: flex;
-    align-items: center;
-    background-color: var(--color2);
-    color: var(--color1);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    box-shadow: 0px 5px 20px var(--color2Blur);
+.register {
+  margin-left: 1vw;
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color2);
+  color: var(--color1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px var(--color2Blur);
 }
 
 @media (max-width: 1024px) {
-    .navbar{
-        height: 7vh;
-    }
-    .logo{
-        width: 7vh;
-        height: 7vh;
-        display: none;
-    }
-    .headers{
-        margin-left: 10vw;
-        width: 100vw;
-    }
-    .element{
-        font-size: 1.8vh;
-    }
+  .navbar {
+    height: 7vh;
+  }
+  .logo {
+    width: 7vh;
+    height: 7vh;
+    display: none;
+  }
+  .headers {
+    margin-left: 10vw;
+    width: 100vw;
+  }
+  .element {
+    font-size: 1.8vh;
+  }
 }
 
 .logo2 {
-    width: 40px;
-    display: flex;
-    justify-content: center;
+  width: 40px;
+  display: flex;
+  justify-content: center;
 }
 .instaLogo {
-    width: 1px;
-    height: 1px;
+  width: 1px;
+  height: 1px;
 }

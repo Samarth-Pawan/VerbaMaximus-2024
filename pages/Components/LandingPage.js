@@ -31,10 +31,10 @@ import instaLogo from "../../public/instagram.png";
 const LandingPage = () => {
   return (
     <div id="main" className="outermost-div">
-      <section>
+      <section className="home-hero-page">
         <TitleComponent />
       </section>
-      <section id="contact">
+      <section id="contact" style={{ height: "autod" }}>
         <div className="landing-contact" style={{ backgroundColor: "black" }}>
           <div
             className="sub-heading-title"
@@ -42,7 +42,10 @@ const LandingPage = () => {
           >
             Contact Us
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+          <div
+            className="contact-us-inner-div"
+            style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}
+          >
             <div
               style={{
                 backgroundImage: "url(/vmlogo.png) ",
@@ -67,7 +70,11 @@ const LandingPage = () => {
                 className="landing-card"
                 style={{ background: "none", color: "black" }}
               >
-                <div style={{ color: "red" }} className="card-title">
+                <div
+                  id="vanish-in-phone"
+                  style={{ color: "red" }}
+                  className="card-title"
+                >
                   <b> ELAS BPHC</b>
                 </div>
                 <div className="card-time" style={{ color: "red" }}>
@@ -119,19 +126,19 @@ const TitleComponent = () => {
   );
   return (
     <ScrollContainer>
-      <section style={{ padding: "" }}>
+      <section className="home-hero-page" style={{ padding: "" }}>
         <ScrollPage>
           <Animator animation={batch(Sticky(), Fade())}>
             <div className="title-image" />
           </Animator>
-          {/* <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -20))}>
+          <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -20))}>
             <div className="title">
-              Vérba Maximus {!isMobile ? <></> : <br />}2024
+              Vérba Maximus {!isMobile ? <></> : <br />}
             </div>
             <div className="title-dante-hero">
               Dante's Inferno {!isMobile ? <></> : <br />}2024
             </div>
-          </Animator> */}
+          </Animator>
 
           <Animator
             animation={batch(
@@ -140,12 +147,63 @@ const TitleComponent = () => {
               MoveOut(0, -20)
             )}
           >
-            <div className="sub-title">28-29 JAN</div>
+            <div className="sub-title">Feb 10 - 11</div>
           </Animator>
         </ScrollPage>
       </section>
 
       <ScrollPage>
+        {/* <Animator
+          animation={batch(
+            Fade(),
+            Sticky(50, !lowHeight ? 60 : 80),
+            MoveIn(0, -20)
+          )}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <br />
+            <br />
+            <br />
+            <br />
+            <div
+              className="theme-title"
+              style={{ fontSize: !isMobile ? "7.4vw" : "7vh" }}
+            >
+              VERBA MAXIMUS
+            </div>
+            <div
+              className="theme-description"
+              style={{
+                fontSize: !isMobile ? "1.5vw" : "2vh",
+                marginTop: "6vh",
+                textAlign: "center",
+              }}
+            >
+              Verba Maximus is BITS Pilani, Hyderabad Campus‘ annual literary
+              fest organized by the ambitious assembly of students from the
+              English Language Activities Society (ELAS). 12 years since its
+              inaugural edition in 2012, VM brings a myriad of events, tourneys
+              and games to the table - pitting the brightest of literary minds
+              against each other. VM also presents engrossing performances from
+              the best artists across the country and promises troves of fun.
+              This February, we return with the twelfth edition of this literary
+              bonanza and welcome you to enter our realm and witness the
+              spectacle unfold.
+              <br />
+              <br />
+            </div>
+          </div>
+          <br />
+          <br />
+          <br />
+          <br />
+        </Animator> */}
         <Animator animation={FadeUp}>
           <div
             style={{
@@ -209,26 +267,34 @@ const TitleComponent = () => {
         <div className="sub-heading-title">PRICING AND REGISTRATION</div>
         <div className="landing-cards">
           <div className="landing-card">
-            <div className="card-title">{"Comedy Night Pass"}</div>
-            <div className="card-time">{"Rs. 300/-"}</div>
+            <div className="card-title">{"Mega Pass"}</div>
+            <div className="card-time">{"Rs. 800/-"}</div>
             <div className="card-desc">
-              {"\n\nAccess to the comedy night :)"}
+              {"\n\n(All Events + Proshow + Accomodation)"}
             </div>
           </div>
 
           <div className="landing-card">
-            <div className="card-title">{"Fest Pass"}</div>
-            <div className="card-time">{"Rs. 300/-"}</div>
+            <div className="card-title">{"Events Pass"}</div>
+            <div className="card-time">{"Rs. 700/-"}</div>
             <div className="card-desc">
-              {"\n\nAccess to all events except proshow"}
+              {"\n\n(Access to all events + proshow only)"}
             </div>
           </div>
 
           <div className="landing-card">
-            <div className="card-title">{"Online Pass"}</div>
-            <div className="card-time">{"Rs. 100/-"}</div>
+            <div className="card-title">{"Offline Events"}</div>
+            <div className="card-time">{"Rs. 400/-"}</div>
             <div className="card-desc">
-              {"\n\nAccess to all the online and hybrid events"}
+              {"\n\n(Access to all the Offline events only)"}
+            </div>
+          </div>
+
+          <div className="landing-card">
+            <div className="card-title">{"Online Events"}</div>
+            <div className="card-time">{"Rs. 150/-"}</div>
+            <div className="card-desc">
+              {"\n\n(Access to all the online events only)"}
             </div>
           </div>
         </div>

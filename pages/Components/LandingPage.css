@@ -31,13 +31,18 @@
   --red-8: #4a0a0a;
   --red-9: #270100;
   --my-colour: papaywhip;
+
+  background-color: var(--bg-colour);
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
 .outermost-div {
+  width: 100vw;
+  height: auto;
   background-color: var(--bg-colour);
+  /* background-color: black; */
   background-image: url(./new-bg.jpg);
   background-repeat: repeat-y;
 
@@ -46,6 +51,7 @@
 }
 #main {
   margin-top: 500px;
+  width: 100vw;
 }
 .title {
   font-size: 7vw;
@@ -75,10 +81,15 @@
   font-style: normal;
 }
 .sub-title {
+  margin-top: 7vw;
   font-size: 4vw;
   color: white;
   mix-blend-mode: difference;
   text-shadow: 0px 5px 20px var(--color2);
+}
+.home-hero-page {
+  background-color: var(--bg-colour);
+  width: 100vw;
 }
 .title-image {
   position: sticky;
@@ -87,11 +98,11 @@
   color: var(--color1);
   /* background-color: rgb(265, 200, 200); */
   backdrop-filter: blur(10);
-  background-size: cover;
+  background-size: auto;
   background-position: center;
   image-rendering: optimizeSpeed;
-  /* background-image: url("./heroBG.png"); */
-  background-image: url(./main-bg.png);
+  /* background-image: url("./bgIMG.png"); */
+  background-image: url(./final-bg.png);
   background-repeat: no-repeat;
 }
 .theme-title {
@@ -135,19 +146,28 @@
   color: var(--subheading-colour);
   /* color: aqua; */
   margin: auto;
+
+  align-self: center;
+  justify-content: center;
 }
 .landing-cards {
+  /* border: 3px solid yellow; */
   margin-top: 5%;
   width: 90%;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
 }
 .landing-card {
   border-radius: 10px;
-  margin: 30px;
+  margin-top: 30px;
   width: 400px;
   height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   color: white;
   background-color: var(--color2);
 }
@@ -171,7 +191,7 @@
   width: 90%;
   margin-bottom: 30px;
   font-size: 20px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .event-detail-card {
   left: 10vw;
@@ -221,6 +241,11 @@
   box-shadow: 0px 0px 90px var(--color1Blur);
   background-color: var(--color1);
 }
+.contact-us-inner-div {
+  display: flex;
+  justify-content: space-around;
+}
+
 @media (max-width: 1024px) {
   .title {
     font-size: 5vh;
@@ -257,4 +282,23 @@
   margin: 2em;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 1024px) {
+  .sub-heading-title {
+    font-size: 4vh;
+  }
+  .landing-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .landing-card {
+    width: 100%;
+  }
+  #vanish-in-phone {
+    display: none;
+  }
 }

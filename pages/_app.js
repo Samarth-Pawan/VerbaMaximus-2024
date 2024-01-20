@@ -7,7 +7,13 @@ function MyApp({ Component, pageProps }) {
   const [windowAvailable, setWindow] = useState(true);
   useEffect(() => setWindow(false));
   return (
-    <div style={{ scrollBehavior: "smooth" }} suppressHydrationWarning>
+    <div
+      style={{
+        width: "100vw",
+        scrollBehavior: "smooth",
+      }}
+      suppressHydrationWarning
+    >
       {windowAvailable ? null : <Component {...pageProps} />}
     </div>
   );
