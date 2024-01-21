@@ -136,7 +136,7 @@ const TitleComponent = () => {
               Vérba Maximus {!isMobile ? <></> : <br />}
             </div>
             <div className="title-dante-hero">
-              Dante's Inferno {!isMobile ? <></> : <br />}2024
+              Dante&apos;s Inferno {!isMobile ? <></> : <br />}2024
             </div>
           </Animator>
 
