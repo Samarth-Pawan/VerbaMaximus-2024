@@ -235,15 +235,15 @@ const TitleComponent = () => {
               Campus.
               <br />
               <br />
-              <Link
+              {/* <Link
                 href="https://docs.google.com/spreadsheets/d/1Rbm5mTJiMnaydnvBmk2561Ob3HEP3uuOgECIM5DEWg8/edit?usp=sharing"
                 style={{ color: "aqua" }}
               >
                 Schedule
               </Link>{" "}
-              |{" "}
+              |{" "} */}
               <Link
-                href="https://unstop.com/creative-cultural-event/verba-maximus-23-complete-pass-verba-maximus-birla-institute-of-technology-science-bits-pilani-591176"
+                href="https://unstop.com/p/verba-maximus-24-bits-pilani-874729"
                 style={{ color: "aqua" }}
               >
                 Register
@@ -301,7 +301,7 @@ const TitleComponent = () => {
         <Link
           scroll={false}
           className="register"
-          href="https://unstop.com/creative-cultural-event/verba-maximus-23-complete-pass-verba-maximus-birla-institute-of-technology-science-bits-pilani-591176"
+          href="https://unstop.com/p/verba-maximus-24-bits-pilani-874729"
         >
           Register Now!!
         </Link>
