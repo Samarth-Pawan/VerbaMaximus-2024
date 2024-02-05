@@ -4,7 +4,11 @@ root {
   --color2: rgb(71, 4, 5, 255);
   --color2Blur: rgba(71, 4, 5, 0.4);
 }
-
+@media (min-width: 1024px) {
+  .display-only-in-mobile {
+    display: none;
+  }
+}
 .navbar {
   width: 100vw;
   /* height: 15vh; */
@@ -19,6 +23,8 @@ root {
   grid-template-rows: 100px;
   box-shadow: 0px 0px 20px var(--color2Blur);
   z-index: 100;
+
+  overflow: scroll;
 }
 
 .logo {
@@ -26,6 +32,8 @@ root {
   width: auto;
   position: relative;
   left: 2vw;
+
+  align-self: center;
 }
 
 .headers {
@@ -66,32 +74,42 @@ root {
 
 @media (max-width: 1024px) {
   .navbar {
-    height: 7vh;
+    /* height: 7vh; */
+    padding: 0;
   }
   .logo {
-    width: 7vh;
-    height: 7vh;
-    display: none;
+    /* width: 7vh; */
+    height: 6.5vh;
+    width: auto;
+    /* display: none; */
   }
   .headers {
-    margin-left: 10vw;
+    /* margin-left: 10vw; */
     width: 100vw;
   }
   .element {
-    font-size: 1.8vh;
+    font-size: 1.5vh;
   }
-}
+  .display-only-in-mobile {
+    display: visible;
+  }
 
-.logo2 {
-  /* width: 40px; */
-  /* border: 3px solid red; */
-  padding: 0;
-  margin: 0;
-  width: auto;
-  display: flex;
-  justify-content: center;
-}
-.instaLogo {
-  width: 1px;
-  height: 1px;
+  .no-display-mobile {
+    display: none;
+  }
+  .logo2 {
+    /* width: 40px; */
+    /* border: 3px solid red; */
+    padding: 0;
+    margin: 0;
+    width: auto;
+    display: flex;
+    justify-content: center;
+
+    display: none;
+  }
+  .instaLogo {
+    width: 1px;
+    height: 1px;
+  }
 }

@@ -13,8 +13,11 @@ export default function Home() {
         <title>Verba Maximus 2024</title>
         <meta name="description" content="Official website for VM '24" />
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap"
+        />
       </Head>
-
       <NavBar />
       <LandingPage />
     </div>
