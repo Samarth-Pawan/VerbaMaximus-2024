@@ -28,8 +28,14 @@ const NavBar = () => {
           </Link>
         </div>
         <div className="element">
-          <Link scroll={false} href="/#contact">
+          {/* <Link scroll={false} href="/#contact">
             Contact Us
+          </Link> */}
+          <Link
+            to="https://docs.google.com/spreadsheets/d/1oRJ7pkPfpPyWiDawue8pELAFt2b4BnYNN4a0ZR9Gm8I/edit?usp=drivesdk"
+            href="https://docs.google.com/spreadsheets/d/1oRJ7pkPfpPyWiDawue8pELAFt2b4BnYNN4a0ZR9Gm8I/edit?usp=drivesdk"
+          >
+            Schedule
           </Link>
         </div>
         <div className="element">
