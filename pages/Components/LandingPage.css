@@ -99,7 +99,7 @@
   background-position: center;
   image-rendering: optimizeSpeed;
   /* background-image: url("./bgIMG.png"); */
-  background-image: url(./final-bg.png);
+  background-image: url(/final-bg.png);
   background-repeat: no-repeat;
 }
 .theme-title {
