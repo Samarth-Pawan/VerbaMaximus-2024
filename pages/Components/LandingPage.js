@@ -25,7 +25,7 @@ import {
 } from "react-scroll-motion";
 import EventsPage from "../events";
 
-import instaLogo from "../../public/instagram.png";
+// import instaLogo from "../../public/instagram.png";
 
 ("/Images/maxresdefault.jpg");
 const LandingPage = () => {
@@ -90,13 +90,13 @@ const LandingPage = () => {
                   <a href="https://www.instagram.com/vm.bphc?igsh=c2Y3eTM0dWtxZW9p">
                     <div
                       className="instaLogo"
-                      style={{ backgroundImage: "url(/instagram.png)" }}
+                      style={{ backgroundImage: "url(/instagram-final.png)" }}
                     />
                   </a>
                   <a href="https://www.facebook.com/verbamaximus?mibextid=ZbWKwL">
                     <div
                       className="instaLogo"
-                      style={{ backgroundImage: "url(/facebook.png)" }}
+                      style={{ backgroundImage: "url(/facebook-final.png)" }}
                     />
                   </a>
                 </div>
@@ -138,9 +138,10 @@ const TitleComponent = () => {
             <div className="title-dante-hero">
               Dante&apos;s Inferno {!isMobile ? <></> : <br />}2024
             </div>
+            <div className="sub-title">Feb 10 - 11</div>
           </Animator>
 
-          <Animator
+          {/* <Animator
             animation={batch(
               Fade(),
               Sticky(50, !lowHeight ? 60 : 80),
@@ -148,7 +149,7 @@ const TitleComponent = () => {
             )}
           >
             <div className="sub-title">Feb 10 - 11</div>
-          </Animator>
+          </Animator> */}
         </ScrollPage>
       </section>
 
@@ -227,27 +228,45 @@ const TitleComponent = () => {
               style={{
                 fontSize: !isMobile ? "1.5vw" : "2vh",
                 marginTop: "6vh",
-                textAlign: "center",
+                textAlign: "justify",
               }}
             >
-              Theme for the Annual English Language Activies Society&apos;s
+              {/* Theme for the Annual English Language Activies Society&apos;s
               literary fest of the year here at <br /> BITS Pilani, Hyderabad
-              Campus.
+              Campus. */}
+              Verba Maximus is BITS Pilani, Hyderabad Campus‘ annual literary
+              fest organized by the ambitious assembly of students from the
+              English Language Activities Society (ELAS). 12 years since its
+              inaugural edition in 2012, VM brings a myriad of events, tourneys
+              and games to the table - pitting the brightest of literary minds
+              against each other. VM also presents engrossing performances from
+              the best artists across the country and promises troves of fun.
+              This February, we return with the twelfth edition of this literary
+              bonanza and welcome you to enter our realm and witness the
+              spectacle unfold.
               <br />
               <br />
-              {/* <Link
-                href="https://docs.google.com/spreadsheets/d/1Rbm5mTJiMnaydnvBmk2561Ob3HEP3uuOgECIM5DEWg8/edit?usp=sharing"
-                style={{ color: "aqua" }}
+              <div
+                style={{
+                  fontSize: !isMobile ? "1.5vw" : "2vh",
+                  marginTop: "6vh",
+                  textAlign: "center",
+                }}
               >
-                Schedule
-              </Link>{" "}
-              |{" "} */}
-              <Link
-                href="https://unstop.com/p/verba-maximus-24-bits-pilani-874729"
-                style={{ color: "aqua" }}
-              >
-                Register
-              </Link>
+                <Link
+                  href="https://docs.google.com/spreadsheets/d/1oRJ7pkPfpPyWiDawue8pELAFt2b4BnYNN4a0ZR9Gm8I/edit?usp=drivesdk"
+                  style={{ color: "aqua" }}
+                >
+                  Schedule
+                </Link>{" "}
+                |{" "}
+                <Link
+                  href="https://unstop.com/p/verba-maximus-24-bits-pilani-874729"
+                  style={{ color: "aqua" }}
+                >
+                  Register
+                </Link>
+              </div>
             </div>
           </div>
         </Animator>

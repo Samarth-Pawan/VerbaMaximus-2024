@@ -32,24 +32,24 @@ const NavBar = () => {
             Contact Us
           </Link>
         </div>
-        <div>
+        <div className="element">
           <Link
             scroll={false}
             href="https://www.instagram.com/vm.bphc?igsh=c2Y3eTM0dWtxZW9p"
             relative="path"
             className="logo2"
           >
-            <img width="100%" src="/instagram.png" />
+            <img width="100%" src="/instagram-final.png" />
           </Link>
         </div>
-        <div>
+        <div className="element">
           <Link
             scroll={false}
             href="https://www.facebook.com/verbamaximus?mibextid=ZbWKwL"
             relative="path"
             className="logo2"
           >
-            <img width="100%" src="/facebook.png" />
+            <img width="100%" src="/facebook-final.png" />
           </Link>
         </div>
         <div className="element">

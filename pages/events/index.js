@@ -3,15 +3,25 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 const EventsPage = () => {
   const [eventShown, setEventShown] = useState(false);
-  const [event, setEvent] = useState({
+  const [selectedEvent, setSelectedEvent] = useState({
     title: "",
     time: "",
     desc: "",
+    venue: "",
   });
-  const showEvent = (index, arr) => {
-    setEvent(arr[index]);
+  const showEvent = (selectedEventPassed) => {
+    // setSelectedEvent(selectedEvent);
+    setSelectedEvent({
+      title: selectedEventPassed.title || "No Title",
+      time: selectedEventPassed.time || "No Time",
+      desc: selectedEventPassed.desc || "No Description",
+    });
+
+    console.log(selectedEvent);
+    console.log(selectedEventPassed);
     setEventShown(true);
   };
+
   const headlinerEvents = [
     {
       title: "Dante's Inferno",
@@ -133,9 +143,9 @@ A fan of the mystery-detective genre? ARG is your dreams come true.
           <div className="sub-heading-title">HEADLINER EVENTS</div>
           {eventShown && (
             <EventDetail
-              name={event.title}
-              desc={event.desc}
-              time={event.time}
+              name={selectedEvent.title}
+              desc={selectedEvent.desc}
+              time={selectedEvent.time}
               setEventShown={setEventShown}
               onClickOutside={() => setEventShown(false)}
             ></EventDetail>
@@ -145,7 +155,7 @@ A fan of the mystery-detective genre? ARG is your dreams come true.
               return (
                 <div
                   className="landing-card"
-                  onClick={() => showEvent(i, events)}
+                  onClick={() => showEvent(event)}
                   key={i}
                 >
                   <div className="card-title">{event.title}</div>
@@ -163,9 +173,9 @@ A fan of the mystery-detective genre? ARG is your dreams come true.
           <div className="sub-heading-title">ELAS EVENTS</div>
           {eventShown && (
             <EventDetail
-              name={event.title}
-              desc={event.desc}
-              time={event.time}
+              name={selectedEvent.title}
+              desc={selectedEvent.desc}
+              time={selectedEvent.time}
               setEventShown={setEventShown}
               onClickOutside={() => setEventShown(false)}
             ></EventDetail>
@@ -175,7 +185,7 @@ A fan of the mystery-detective genre? ARG is your dreams come true.
               return (
                 <div
                   className="landing-card"
-                  onClick={() => showEvent(i, onlineEvents)}
+                  onClick={() => showEvent(event)}
                   key={i}
                 >
                   <div className="card-title">{event.title}</div>
@@ -193,9 +203,9 @@ A fan of the mystery-detective genre? ARG is your dreams come true.
           <div className="sub-heading-title">COLLAB EVENTS</div>
           {eventShown && (
             <EventDetail
-              name={event.title}
-              desc={event.desc}
-              time={event.time}
+              name={selectedEvent.title}
+              desc={selectedEvent.desc}
+              time={selectedEvent.time}
               setEventShown={setEventShown}
               onClickOutside={() => setEventShown(false)}
             ></EventDetail>
@@ -205,7 +215,7 @@ A fan of the mystery-detective genre? ARG is your dreams come true.
               return (
                 <div
                   className="landing-card"
-                  onClick={() => showEvent(i, onlineEvents)}
+                  onClick={() => showEvent(event)}
                   key={i}
                 >
                   <div className="card-title">{event.title}</div>
@@ -225,7 +235,13 @@ A fan of the mystery-detective genre? ARG is your dreams come true.
   );
 };
 
-const EventDetail = ({ name, time, desc, setEventShown, onClickOutside }) => {
+const EventDetail = ({
+  name = "",
+  time = "",
+  desc = "",
+  setEventShown,
+  onClickOutside,
+}) => {
   const ref = useRef(null);
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -241,7 +257,10 @@ const EventDetail = ({ name, time, desc, setEventShown, onClickOutside }) => {
   return (
     <div ref={ref} className="event-detail-card">
       <div className="detail-title">{name.toUpperCase()}</div>
-      <div className="detail-time">TIME : {time}</div>
+      <div className="detail-time">
+        <b>TIME : </b>
+        {time}
+      </div>
       <div className="detail-desc">{desc}</div>
       <button
         className="exit"
